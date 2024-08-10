@@ -13,7 +13,7 @@
   * You should have received a copy of the GNU General Public License
   * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-  #pragma once
+#pragma once
 
 
 //#define USE_MATRIX_I2C
@@ -33,13 +33,16 @@
 
 
 #define QUICK_TAP_TERM 0
+
 #ifdef TAPPING_TERM
     #undef TAPPING_TERM
     #define TAPPING_TERM 200
 #endif
-#define ENCODER_DIRECTION_FLIP
 
-#define ENCODER_RESOLUTIONS_RIGHT { 1, 1 }
+#define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
+
+#define ENCODER_DIRECTION_FLIP
+#define ENCODER_RESOLUTION 1
 
 #define RGBLIGHT_SLEEP
 //
