@@ -1,4 +1,3 @@
-MOUSEKEY_ENABLE = yes
 # Enable system and audio controls
 EXTRAKEY_ENABLE = yes
 # Disables console for debugging
@@ -10,3 +9,5 @@ LTO_ENABLE = yes
 OLED_ENABLE = yes
 # Caps words toggle
 CAPS_WORD_ENABLE = yes
+# Enable via
+# VIA_ENABLE = yes

@@ -21,6 +21,7 @@
 /* Select hand configuration */
 
 ///https://thomasbaart.nl/2018/12/01/reducing-firmware-size-in-qmk/
+#define DYNAMIC_KEYMAP_LAYER_COUNT 7
 
 
 #define MASTER_LEFT
@@ -42,7 +43,7 @@
 #define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
 
 #define ENCODER_DIRECTION_FLIP
-#define ENCODER_RESOLUTION 1
+#define ENCODER_RESOLUTION 4
 
 #define RGBLIGHT_SLEEP
 //
