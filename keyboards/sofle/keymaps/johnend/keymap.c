@@ -61,8 +61,10 @@
 		{25, 2, hsv}, \
 	  {35+ 25, 2, hsv}
 
-#define KC_CAPP         // Capture portion of screen
-#define KC_CPYP   // Copy portion of screen
+#define KC_CAPW LGUI(LSFT(KC_3))        // Capture whole screen
+#define KC_CPYW LGUI(LSFT(LCTL(KC_3)))  // Copy whole screen
+#define KC_CAPP LGUI(LSFT(KC_4))        // Capture portion of screen
+#define KC_CPYP LGUI(LSFT(LCTL(KC_4)))  // Copy portion of screen
 
 enum sofle_layers {
     _DEFAULTS = 0,
@@ -122,7 +124,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 //    ┌──────┬──────┬──────┬──────┬──────┬──────┐               ┌──────┬──────┬──────┬──────┬────┬─────┐
-//    │      │  f1  │  f2  │  f3  │  f4  │  f5  │               │ f12  │  no  │  no  │  no  │ no │  󰹾  │
+//    │      │  no  │  no  │  no  │  no  │  no  │               │  󰒮   │     │  󰒭   │     │   │  󰹾  │
 //    ├──────┼──────┼──────┼──────┼──────┼──────┤               ├──────┼──────┼──────┼──────┼────┼─────┤
 //    │  no  │  no  │  no  │  =   │ 󰘶(,) │ 󰘶(.) │               │  ;   │ 󰘶(9) │ 󰘶(0) │  no  │ no │ no  │
 //    ├──────┼──────┼──────┼──────┼──────┼──────┤               ├──────┼──────┼──────┼──────┼────┼─────┤
@@ -133,30 +135,30 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                  │      │      │      │      │     │   │     │      │      │      │      │
 //                  └──────┴──────┴──────┴──────┴─────┘   └─────┴──────┴──────┴──────┴──────┘
 [_LOWER] = LAYOUT(
-  _______      , KC_F1          , KC_F2      , KC_F3      , KC_F4          , KC_F5         ,                         KC_F12        , XXXXXXX    , XXXXXXX    , XXXXXXX       , XXXXXXX , KC_DEL ,
+  _______      , XXXXXXX        , XXXXXXX    , XXXXXXX    , XXXXXXX        , XXXXXXX       ,                         KC_MPRV       , KC_MPLY    , KC_MNXT    , KC_VOLD       , KC_VOLU , KC_DEL ,
   XXXXXXX      , XXXXXXX        , XXXXXXX    , KC_EQUAL   , LSFT(KC_COMMA) , LSFT(KC_DOT)  ,                         KC_SCLN       , LSFT(KC_9) , LSFT(KC_0) , KC_NO         , KC_NO   , KC_NO  ,
   LSFT(KC_TAB) , LSFT(KC_EQUAL) , KC_MINUS   , KC_NO      , LSFT(KC_LBRC)  , LSFT(KC_RBRC) ,                         LSFT(KC_SCLN) , KC_LBRC    , KC_RBRC    , LSFT(KC_BSLS) , XXXXXXX , XXXXXXX,
   _______      , LSFT(KC_1)     , LSFT(KC_2) , LSFT(KC_3) , LSFT(KC_4)     , LSFT(KC_5)    , _______ ,     _______ , LSFT(KC_6)    , LSFT(KC_7) , LSFT(KC_8) , KC_NO         , KC_BSLS , _______,
                                   _______    , _______    , _______        , _______       , _______ ,     _______ , _______       , _______    , _______    , _______
 ),
 
-//    ┌─────┬────┬─────┬─────┬──────────────┬───────────┐               ┌──────┬──────┬──────┬──────┬────┬─────┐
-//    │ no  │   │    │  󰒮  │             │     󰒭     │               │  no  │  no  │  no  │  no  │ no │  󰹾  │
-//    ├─────┼────┼─────┼─────┼──────────────┼───────────┤               ├──────┼──────┼──────┼──────┼────┼─────┤
-//    │ no  │ no │ no  │ no  │ 󰘳/(󰘶(󰘴(4))) │ 󰘳/(󰘶(4)) │               │ home │ pgdn │ pgup │ end  │ no │ no  │
-//    ├─────┼────┼─────┼─────┼──────────────┼───────────┤               ├──────┼──────┼──────┼──────┼────┼─────┤
-//    │ no  │ no │ no  │ no  │     esc      │    no     │               │     │     │     │     │ no │ no  │
-//    ├─────┼────┼─────┼─────┼──────────────┼───────────┼─────┐   ┌─────┼──────┼──────┼──────┼──────┼────┼─────┤
-//    │     │ no │ no  │ no  │      no      │    no     │     │   │     │ 󰘶() │  no  │  no  │ 󰘶() │ no │     │
-//    └─────┴────┼─────┼─────┼──────────────┼───────────┼─────┤   ├─────┼──────┼──────┼──────┼──────┼────┴─────┘
-//               │     │     │              │           │     │   │     │      │      │      │      │
-//               └─────┴─────┴──────────────┴───────────┴─────┘   └─────┴──────┴──────┴──────┴──────┘
+//    ┌─────┬────┬─────┬─────┬──────┬──────┐               ┌──────┬──────┬──────┬──────┬────┬─────┐
+//    │ no  │ no │ no  │ no  │  no  │  no  │               │  no  │  no  │  no  │  no  │ no │ no  │
+//    ├─────┼────┼─────┼─────┼──────┼──────┤               ├──────┼──────┼──────┼──────┼────┼─────┤
+//    │ no  │ no │ no  │ no  │ cPYP │ cAPP │               │ home │ pgdn │ pgup │ end  │ no │ no  │
+//    ├─────┼────┼─────┼─────┼──────┼──────┤               ├──────┼──────┼──────┼──────┼────┼─────┤
+//    │ no  │ no │ no  │ no  │ esc  │  no  │               │     │     │     │     │ no │ no  │
+//    ├─────┼────┼─────┼─────┼──────┼──────┼─────┐   ┌─────┼──────┼──────┼──────┼──────┼────┼─────┤
+//    │     │ no │ no  │ no  │  no  │  no  │     │   │     │ 󰘶() │  no  │  no  │ 󰘶() │ no │     │
+//    └─────┴────┼─────┼─────┼──────┼──────┼─────┤   ├─────┼──────┼──────┼──────┼──────┼────┴─────┘
+//               │     │     │      │      │     │   │     │      │      │      │      │
+//               └─────┴─────┴──────┴──────┴─────┘   └─────┴──────┴──────┴──────┴──────┘
 [_RAISE] = LAYOUT(
-  XXXXXXX , KC_VOLD , KC_VOLU , KC_MPRV , KC_MPLY                , KC_MNXT          ,                         XXXXXXX       , XXXXXXX , XXXXXXX , XXXXXXX        , XXXXXXX , KC_DEL ,
-  XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , LGUI(LSFT(LCTL(KC_4))) , LGUI(LSFT(KC_4)) ,                         KC_HOME       , KC_PGDN , KC_PGUP , KC_END         , XXXXXXX , XXXXXXX,
-  XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_ESC                 , XXXXXXX          ,                         KC_LEFT       , KC_DOWN , KC_UP   , KC_RIGHT       , XXXXXXX , XXXXXXX,
-  _______ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX                , XXXXXXX          , _______ ,     _______ , LSFT(KC_LEFT) , XXXXXXX , XXXXXXX , LSFT(KC_RIGHT) , XXXXXXX , _______,
-                      _______ , _______ , _______                , _______          , _______ ,     _______ , _______       , _______ , _______ , _______
+  XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,                         XXXXXXX       , XXXXXXX , XXXXXXX , XXXXXXX        , XXXXXXX , XXXXXXX,
+  XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_CPYP , KC_CAPP ,                         KC_HOME       , KC_PGDN , KC_PGUP , KC_END         , XXXXXXX , XXXXXXX,
+  XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_ESC  , XXXXXXX ,                         KC_LEFT       , KC_DOWN , KC_UP   , KC_RIGHT       , XXXXXXX , XXXXXXX,
+  _______ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , _______ ,     _______ , LSFT(KC_LEFT) , XXXXXXX , XXXXXXX , LSFT(KC_RIGHT) , XXXXXXX , _______,
+                      _______ , _______ , _______ , _______ , _______ ,     _______ , _______       , _______ , _______ , _______
 ),
 
 //    ┌─────────┬─────────┬─────────┬─────────┬─────┬─────┐               ┌─────────┬─────┬─────┬────────────┬────┬────┐
