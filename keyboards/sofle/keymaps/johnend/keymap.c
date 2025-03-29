@@ -126,7 +126,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //    ┌──────┬──────┬──────┬──────┬──────┬──────┐               ┌──────┬──────┬──────┬──────┬────┬─────┐
 //    │      │  no  │  no  │  no  │  no  │  no  │               │  󰒮   │     │  󰒭   │     │   │  󰹾  │
 //    ├──────┼──────┼──────┼──────┼──────┼──────┤               ├──────┼──────┼──────┼──────┼────┼─────┤
-//    │  no  │  no  │  no  │  =   │ 󰘶(,) │ 󰘶(.) │               │  ;   │ 󰘶(9) │ 󰘶(0) │  no  │ no │ no  │
+//    │  no  │  no  │ 󰘶(8) │  =   │ 󰘶(,) │ 󰘶(.) │               │  ;   │ 󰘶(9) │ 󰘶(0) │  no  │ no │ no  │
 //    ├──────┼──────┼──────┼──────┼──────┼──────┤               ├──────┼──────┼──────┼──────┼────┼─────┤
 //    │ 󰘶(󰌒) │ 󰘶(=) │  -   │  no  │ 󰘶([) │ 󰘶(]) │               │ 󰘶(;) │  [   │  ]   │ 󰘶(\) │ no │ no  │
 //    ├──────┼──────┼──────┼──────┼──────┼──────┼─────┐   ┌─────┼──────┼──────┼──────┼──────┼────┼─────┤
@@ -136,7 +136,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                  └──────┴──────┴──────┴──────┴─────┘   └─────┴──────┴──────┴──────┴──────┘
 [_LOWER] = LAYOUT(
   _______      , XXXXXXX        , XXXXXXX    , XXXXXXX    , XXXXXXX        , XXXXXXX       ,                         KC_MPRV       , KC_MPLY    , KC_MNXT    , KC_VOLD       , KC_VOLU , KC_DEL ,
-  XXXXXXX      , XXXXXXX        , XXXXXXX    , KC_EQUAL   , LSFT(KC_COMMA) , LSFT(KC_DOT)  ,                         KC_SCLN       , LSFT(KC_9) , LSFT(KC_0) , KC_NO         , KC_NO   , KC_NO  ,
+  XXXXXXX      , XXXXXXX        , LSFT(KC_8) , KC_EQUAL   , LSFT(KC_COMMA) , LSFT(KC_DOT)  ,                         KC_SCLN       , LSFT(KC_9) , LSFT(KC_0) , KC_NO         , KC_NO   , KC_NO  ,
   LSFT(KC_TAB) , LSFT(KC_EQUAL) , KC_MINUS   , KC_NO      , LSFT(KC_LBRC)  , LSFT(KC_RBRC) ,                         LSFT(KC_SCLN) , KC_LBRC    , KC_RBRC    , LSFT(KC_BSLS) , XXXXXXX , XXXXXXX,
   _______      , LSFT(KC_1)     , LSFT(KC_2) , LSFT(KC_3) , LSFT(KC_4)     , LSFT(KC_5)    , _______ ,     _______ , LSFT(KC_6)    , LSFT(KC_7) , LSFT(KC_8) , KC_NO         , KC_BSLS , _______,
                                   _______    , _______    , _______        , _______       , _______ ,     _______ , _______       , _______    , _______    , _______
