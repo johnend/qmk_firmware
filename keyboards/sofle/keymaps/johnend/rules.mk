@@ -9,5 +9,6 @@ LTO_ENABLE = yes
 OLED_ENABLE = yes
 # Caps words toggle
 CAPS_WORD_ENABLE = yes
-# Enable via
+# VIA support - enable this if using standard QMK with VIA
+# Note: For VIAL support, you need to use the VIAL fork of QMK
 # VIA_ENABLE = yes
