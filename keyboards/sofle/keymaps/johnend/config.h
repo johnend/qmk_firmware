@@ -32,12 +32,15 @@
 
 // Tap-hold configuration for home row mods
 // With Chordal Hold + Permissive Hold, opposite-hand combos activate immediately
-// This term only matters for same-hand rolls and solo holds
-#define TAPPING_TERM 150
+// IMPORTANT: Chordal Hold needs a generous tapping term (300ms+) for proper buffering
+// This is much longer than the default, but Chordal Hold + Permissive Hold settle
+// keys quickly, so you rarely wait out the full timeout in fast typing
+#define TAPPING_TERM 300
 
 // Use built-in Chordal Hold for bilateral combinations
 // This automatically handles opposite-hand vs same-hand behavior
 #define CHORDAL_HOLD
+// Use with Permissive Hold for best experience (keys settle quickly)
 #define PERMISSIVE_HOLD
 #define PERMISSIVE_HOLD_PER_KEY
 

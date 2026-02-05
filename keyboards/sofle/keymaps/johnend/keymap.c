@@ -80,17 +80,17 @@ enum custom_keycodes {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    //    ┌────────────────┬───┬───┬───┬───┬────────┐                       ┌───────────────┬───┬───┬─────┬───┬───┐
-    //    │      esc       │ 1 │ 2 │ 3 │ 4 │   5    │                       │       6       │ 7 │ 8 │  9  │ 0 │ 󰁮 │
-    //    ├────────────────┼───┼───┼───┼───┼────────┤                       ├───────────────┼───┼───┼─────┼───┼───┤
-    //    │       `        │ q │ w │ e │ r │   t    │                       │       y       │ u │ i │  o  │ p │ - │
-    //    ├────────────────┼───┼───┼───┼───┼────────┤                       ├───────────────┼───┼───┼─────┼───┼───┤
-    //    │ LT(_NUMPAD, 󰌒) │ a │ s │ d │ f │   g    │                       │       h       │ j │ k │  l  │ ; │ ' │
-    //    ├────────────────┼───┼───┼───┼───┼────────┼──────────┐   ┌────────┼───────────────┼───┼───┼─────┼───┼───┤
-    //    │       󰘶        │ z │ x │ c │ v │   b    │         │   │ TO(1)  │       n       │ m │ , │  .  │ / │ 󰘶 │
-    //    └────────────────┴───┼───┼───┼───┼────────┼──────────┤   ├────────┼───────────────┼───┼───┼─────┼───┴───┘
-    //                         │ 󰘴 │ 󰘵 │ 󱞡 │ (esc) │ 󰘳/(ent) │   │ 󰘴(spc) │ LT(_RAISE, 󰁮) │  │ 󰘵 │ 󰘳/ │
-    //                         └───┴───┴───┴────────┴──────────┘   └────────┴───────────────┴───┴───┴─────┘
+    //    ┌────────────────┬────────┬────────┬───────────┬──────┬────────┐                       ┌───────────────┬───────────┬───────────┬───────────┬───────────┬───┐
+    //    │      esc       │   1    │   2    │     3     │  4   │   5    │                       │       6       │     7     │     8     │     9     │     0     │ 󰁮 │
+    //    ├────────────────┼────────┼────────┼───────────┼──────┼────────┤                       ├───────────────┼───────────┼───────────┼───────────┼───────────┼───┤
+    //    │       `        │   q    │   w    │     e     │  r   │   t    │                       │       y       │     u     │     i     │     o     │     p     │ - │
+    //    ├────────────────┼────────┼────────┼───────────┼──────┼────────┤                       ├───────────────┼───────────┼───────────┼───────────┼───────────┼───┤
+    //    │ LT(_NUMPAD, 󰌒) │ 󰘶_T(a) │ 󰘳/(s) │ LALT_T(d) │ 󰘴(f) │   g    │                       │       h       │ RCTL_T(j) │ RALT_T(k) │ RGUI_T(l) │ RSFT_T(;) │ ' │
+    //    ├────────────────┼────────┼────────┼───────────┼──────┼────────┼──────────┐   ┌────────┼───────────────┼───────────┼───────────┼───────────┼───────────┼───┤
+    //    │       󰘶        │   z    │   x    │     c     │  v   │   b    │         │   │  mute  │       n       │     m     │     ,     │     .     │     /     │ 󰘶 │
+    //    └────────────────┴────────┼────────┼───────────┼──────┼────────┼──────────┤   ├────────┼───────────────┼───────────┼───────────┼───────────┼───────────┴───┘
+    //                              │   󰘴    │     󰘵     │  󱞡   │ (esc) │ 󰘳/(ent) │   │ 󰘴(spc) │ LT(_RAISE, 󰁮) │          │     󰘵     │    󰘳/    │
+    //                              └────────┴───────────┴──────┴────────┴──────────┘   └────────┴───────────────┴───────────┴───────────┴───────────┘
     [_QWERTY] = LAYOUT(KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC, KC_GRV, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_MINS, LT(_NUMPAD, KC_TAB), LSFT_T(KC_A), LGUI_T(KC_S), LALT_T(KC_D), LCTL_T(KC_F), KC_G, KC_H, RCTL_T(KC_J), RALT_T(KC_K), RGUI_T(KC_L), RSFT_T(KC_SCLN), KC_QUOT, KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_MPLY, KC_MUTE, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT, KC_LCTL, KC_LALT, KC_LOWER, MEH_T(KC_ESC), LGUI_T(KC_ENT), LCTL_T(KC_SPC), LT(_RAISE, KC_BSPC), KC_HYPR, KC_RALT, KC_LGUI),
 
     //    ┌──────┬──────┬──────┬──────┬──────┬──────┐               ┌──────┬──────┬──────┬──────┬────┬─────┐
@@ -119,17 +119,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //               └─────┴─────┴──────┴──────┴─────┘   └─────┴──────┴──────┴──────┴──────┘
     [_RAISE] = LAYOUT(XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_CPYP, KC_CAPP, KC_HOME, KC_PGDN, KC_PGUP, KC_END, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_ESC, XXXXXXX, KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT, XXXXXXX, XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, LSFT(KC_LEFT), XXXXXXX, XXXXXXX, LSFT(KC_RIGHT), XXXXXXX, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______),
 
-    //    ┌─────────┬─────────┬─────────┬─────────┬─────┬─────┐               ┌─────────┬─────┬─────┬────────────┬────┬────┐
-    //    │ EE_CLR  │   no    │   no    │   no    │ no  │ no  │               │   no    │ no  │ no  │     no     │ no │ no │
-    //    ├─────────┼─────────┼─────────┼─────────┼─────┼─────┤               ├─────────┼─────┼─────┼────────────┼────┼────┤
-    //    │ QK_BOOT │   no    │   no    │   no    │ no  │ no  │               │   no    │ no  │ no  │     no     │ no │ no │
-    //    ├─────────┼─────────┼─────────┼─────────┼─────┼─────┤               ├─────────┼─────┼─────┼────────────┼────┼────┤
-    //    │ RGB_TOG │ RGB_HUI │ RGB_SAI │ RGB_VAI │ no  │ no  │               │ C(G()) │ no  │ no  │ C(G(rght)) │ no │ no │
-    //    ├─────────┼─────────┼─────────┼─────────┼─────┼─────┼─────┐   ┌─────┼─────────┼─────┼─────┼────────────┼────┼────┤
-    //    │ RGB_MOD │ RGB_HUD │ RGB_SAD │ RGB_VAD │ no  │    │ no  │   │ no  │   no    │  󰒮  │    │     󰒭      │ no │ no │
-    //    └─────────┴─────────┼─────────┼─────────┼─────┼─────┼─────┤   ├─────┼─────────┼─────┼─────┼────────────┼────┴────┘
-    //                        │         │         │     │     │     │   │     │         │     │     │            │
-    //                        └─────────┴─────────┴─────┴─────┴─────┘   └─────┴─────────┴─────┴─────┴────────────┘
+    //    ┌─────────┬────┬─────┬─────┬─────┬─────┐               ┌─────────┬─────┬─────┬────────────┬────┬────┐
+    //    │ EE_CLR  │ no │ no  │ no  │ no  │ no  │               │   no    │ no  │ no  │     no     │ no │ no │
+    //    ├─────────┼────┼─────┼─────┼─────┼─────┤               ├─────────┼─────┼─────┼────────────┼────┼────┤
+    //    │ QK_BOOT │ no │ no  │ no  │ no  │ no  │               │   no    │ no  │ no  │     no     │ no │ no │
+    //    ├─────────┼────┼─────┼─────┼─────┼─────┤               ├─────────┼─────┼─────┼────────────┼────┼────┤
+    //    │   no    │ no │ no  │ no  │ no  │ no  │               │ C(G()) │ no  │ no  │ C(G(rght)) │ no │ no │
+    //    ├─────────┼────┼─────┼─────┼─────┼─────┼─────┐   ┌─────┼─────────┼─────┼─────┼────────────┼────┼────┤
+    //    │   no    │ no │ no  │ no  │ no  │    │ no  │   │ no  │   no    │  󰒮  │    │     󰒭      │ no │ no │
+    //    └─────────┴────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────────┼─────┼─────┼────────────┼────┴────┘
+    //                   │     │     │     │     │     │   │     │         │     │     │            │
+    //                   └─────┴─────┴─────┴─────┴─────┘   └─────┴─────────┴─────┴─────┴────────────┘
     [_ADJUST] = LAYOUT(EE_CLR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, C(G(KC_LEFT)), KC_NO, KC_NO, C(G(KC_RGHT)), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_QWERTY, XXXXXXX, XXXXXXX, XXXXXXX, KC_MPRV, KC_MPLY, KC_MNXT, XXXXXXX, XXXXXXX, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______),
 
     //    ┌─────┬────┬─────┬──────────────┬─────┬─────┐               ┌─────┬─────┬──────┬─────┬────┬─────┐
@@ -148,28 +148,63 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Chordal Hold configuration for bilateral combinations
 // Define which keys are on left vs right hand for split keyboard
 // L = left hand, R = right hand, * = exempt from opposite-hand rule
-const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM = LAYOUT(
-    //  Left hand (columns 0-5)                     Right hand (columns 6-11)
-    'L', 'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', 'R',           // Row 0: Number row
-    'L', 'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', 'R',           // Row 1: QWERTY row
-    'L', 'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', 'R',           // Row 2: Home row
-    'L', 'L', 'L', 'L', 'L', 'L', 'L', 'R', 'R', 'R', 'R', 'R', 'R', 'R', // Row 3: Bottom row + encoders
-    'L', 'L', 'L', '*', '*', '*', '*', 'R', 'R', 'R'                      // Row 4: Thumb clusters (marked as * to allow same-hand chords)
-);
+//
+// IMPORTANT: This must be a raw matrix (10 rows x 6 cols), NOT using LAYOUT macro
+// Sofle split keyboard uses rows 0-4 for left half, rows 5-9 for right half
+const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
+    // Left half - Rows 0-4 (6 columns each)
+    {'L', 'L', 'L', 'L', 'L', 'L'}, // Row 0: Number row (left)
+    {'L', 'L', 'L', 'L', 'L', 'L'}, // Row 1: QWERTY row (left)
+    {'L', 'L', 'L', 'L', 'L', 'L'}, // Row 2: Home row (left) - LSFT_T(KC_A) is at [2,1]
+    {'L', 'L', 'L', 'L', 'L', 'L'}, // Row 3: Bottom row (left)
+    {'L', 'L', 'L', '*', '*', '*'}, // Row 4: Thumb cluster (left) - * allows same-hand chords
+
+    // Right half - Rows 5-9 (6 columns each)
+    {'R', 'R', 'R', 'R', 'R', 'R'}, // Row 5: Number row (right)
+    {'R', 'R', 'R', 'R', 'R', 'R'}, // Row 6: QWERTY row (right)
+    {'R', 'R', 'R', 'R', 'R', 'R'}, // Row 7: Home row (right) - RSFT_T(KC_SCLN) is at [7,1]
+    {'R', 'R', 'R', 'R', 'R', 'R'}, // Row 8: Bottom row (right)
+    {'*', '*', '*', 'R', 'R', 'R'}  // Row 9: Thumb cluster (right) - * allows same-hand chords
+};
 
 // Per-key permissive hold configuration
-// Disable permissive hold on thumb mod-tap keys to prevent accidental activation
+// Disable permissive hold on thumb mod-tap keys and SHIFT keys to prevent accidental activation
+// This forces Chordal Hold to handle shift keys strictly (opposite-hand only)
 bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case LCTL_T(KC_SPC): // Left thumb: Ctrl when held, Space when tapped
+        case LCTL_T(KC_SPC): // Right thumb: Ctrl when held, Space when tapped
         case LGUI_T(KC_ENT): // Left thumb: GUI when held, Enter when tapped
         case MEH_T(KC_ESC):  // Left thumb: Meh when held, Esc when tapped
             // Disable permissive hold - wait for full tapping term
             // This prevents accidental Ctrl+A when quickly pressing Space then A
             return false;
+
+        // CRITICAL: Disable permissive hold for SHIFT keys
+        // Let Chordal Hold handle these strictly (opposite-hand only)
+        case LSFT_T(KC_A):    // Left shift homerow mod
+        case RSFT_T(KC_SCLN): // Right shift homerow mod
+            return false;
+
         default:
-            // Enable permissive hold for homerow mods (works with Chordal Hold)
+            // Enable permissive hold for other homerow mods (Ctrl/Alt/GUI)
+            // With Chordal Hold, this only affects opposite-hand combinations
             return true;
+    }
+}
+
+// Custom chordal hold callback for explicit same-hand prevention on shift keys
+// This enforces the opposite-hands rule: same-hand = tap, opposite-hand = hold
+bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t *tap_hold_record, uint16_t other_keycode, keyrecord_t *other_record) {
+    // For shift keys, strictly enforce opposite-hand-only activation
+    switch (tap_hold_keycode) {
+        case LSFT_T(KC_A):
+        case RSFT_T(KC_SCLN):
+            // Use the default chordal hold logic (checks hand position from chordal_hold_layout)
+            // Returns false for same-hand (tap), true for opposite-hand (hold)
+            return get_chordal_hold_default(tap_hold_record, other_record);
+        default:
+            // For other mod-taps, use default behavior
+            return get_chordal_hold_default(tap_hold_record, other_record);
     }
 }
 
